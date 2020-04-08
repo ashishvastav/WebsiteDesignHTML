@@ -1,0 +1,428 @@
+                            * {
+                                box-sizing: border-box;
+                                margin: 0;
+                                padding: 0;
+                                padding-top: -10px;
+                                text-decoration: none;
+                                list-style: none;
+                            }
+                            
+                            body {
+                                background-image: url(BG.jpg);
+                                background-size: cover;
+                                background-position: center;
+                                background-attachment: fixed;
+                            }
+                            
+                            li,
+                            a,
+                            button {
+                                font-family: sans-serif;
+                                font-weight: 500;
+                                font-size: 16px;
+                                color: #edf0f1;
+                                text-decoration: none;
+                            }
+                            
+                            header {
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: center;
+                                padding: 30px 10%;
+                                padding-top: -15px;
+                                background-color: blue;
+                                height: 80px;
+                            }
+                            
+                            label.logo {
+                                cursor: pointer;
+                                margin-right: auto;
+                                color: white;
+                                font-size: 35px;
+                                font-weight: bold;
+                                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                            }
+                            
+                            .navLink {
+                                list-style: none;
+                            }
+                            
+                            .navLink li {
+                                display: inline-block;
+                                padding: 0px 20px;
+                            }
+                            
+                            .navLink li a {
+                                transition: all 0.3s ease 0s;
+                                font-size: 17px;
+                                text-transform: uppercase;
+                            }
+                            
+                            .navLink li a:hover {
+                                color: #0088a9;
+                            }
+                            
+                            button {
+                                padding: 9px 25px;
+                                background-color: rgba(0, 136, 169, 1);
+                                border: none;
+                                border-radius: 50px;
+                                cursor: pointer;
+                                transition: all 0.3s ease 0s;
+                            }
+                            
+                            button:hover {
+                                background-color: rgba(0, 136, 169, .8);
+                            }
+                            
+                            .navLink .fa {
+                                color: #fff;
+                                width: 10px;
+                                height: 10px;
+                                text-align: center;
+                                margin-right: 8px;
+                            }
+                            
+                            .navLink ul .fa:hover {
+                                color: #0088a9;
+                            }
+                            
+                            label.logo:hover {
+                                color: #0088a9;
+                            }
+                            
+                            #iconbar {
+                                color: white;
+                                font-size: 2rem;
+                                position: absolute;
+                                top: 20px;
+                                right: 20px;
+                                opacity: 0;
+                                visibility: hidden;
+                            }
+                            
+                            #iconbar:hover {
+                                color: #0088a9;
+                            }
+                            
+                            .wrapper {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                max-width: 350px;
+                                width: 100%;
+                                background: #fff;
+                                padding: 25px;
+                                border-radius: 5px;
+                                box-shadow: 4px 4px 2px rgba(254, 236, 164, 1);
+                            }
+                            
+                            .wrapper h2 {
+                                text-align: center;
+                                margin-bottom: 20px;
+                                text-transform: uppercase;
+                                letter-spacing: 3px;
+                                color: #332902;
+                            }
+                            
+                            .wrapper .input_field {
+                                margin-bottom: 10px;
+                            }
+                            
+                            .wrapper .input_field input[type="text"],
+                            .wrapper textarea {
+                                border: 1px solid #e0e0e0;
+                                width: 100%;
+                                padding: 10px;
+                            }
+                            
+                            .wrapper textarea {
+                                resize: none;
+                                height: 80px;
+                            }
+                            
+                            .wrapper .btn input[type="submit"] {
+                                border: 0px;
+                                margin-top: 15px;
+                                padding: 10px;
+                                text-align: center;
+                                width: 100%;
+                                background: #fece0c;
+                                color: #332902;
+                                text-transform: uppercase;
+                                letter-spacing: 5px;
+                                font-weight: bold;
+                                border-radius: 25px;
+                                cursor: pointer;
+                            }
+                            
+                            #error_message {
+                                margin-bottom: 20px;
+                                background: #fe8b8e;
+                                padding: 0px;
+                                text-align: center;
+                                font-size: 14px;
+                                transition: all 0.5s ease;
+                            }
+                            
+                            #firstMessage {
+                                margin: 50px 50px;
+                                padding: 50px 50px;
+                                text-align: center;
+                                color: rgba(253, 253, 253, .8);
+                                letter-spacing: 5px;
+                                font-weight: bold;
+                                border-radius: 25px;
+                                cursor: pointer;
+                                top: 10%;
+                                left: 45%;
+                                transform: translate(-50%, -50%);
+                                position: absolute;
+                                font-size: 35px;
+                                animation: type 6s steps(36);
+                                overflow: hidden;
+                                white-space: nowrap;
+                                width: 36ch;
+                            }
+                            
+                            .pieChart {
+                                position: absolute;
+                                width: 1000px;
+                                margin: 50px 50px;
+                                padding: 50px 100px;
+                                top: 30%;
+                                left: 45%;
+                                transform: translate(-50%, -50%);
+                            }
+                            
+                            .pieChart .box {
+                                width: 25%;
+                                float: left;
+                            }
+                            
+                            .pieChart .box h2 {
+                                text-align: center;
+                                color: #fff;
+                                text-transform: uppercase;
+                                font-size: 20px;
+                                margin-top: 4%;
+                            }
+                            
+                            .pieChart .box .chart {
+                                position: relative;
+                                width: 100px;
+                                height: 100px;
+                                margin: 0 auto;
+                                text-align: center;
+                                font-size: 25px;
+                                line-height: 100px;
+                            }
+                            
+                            .pieChart .box canvas {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                            }
+                            
+                            .pieChart .box .chart:hover {
+                                background-color: rgba(0, 136, 169, 1);
+                                border: none;
+                                border-radius: 50px;
+                                cursor: pointer;
+                                transition: all 0.3s ease 0s;
+                                color: white;
+                            }
+                            
+                            .pieChartTwo {
+                                position: absolute;
+                                width: 1000px;
+                                margin: 50px 50px;
+                                padding: 50px 80px;
+                                top: 55%;
+                                left: 52%;
+                                transform: translate(-50%, -50%);
+                            }
+                            
+                            .pieChartTwo .boxTwo {
+                                width: 25%;
+                                float: left;
+                            }
+                            
+                            .pieChartTwo .boxTwo h2 {
+                                text-align: center;
+                                color: #fff;
+                                text-transform: uppercase;
+                                font-size: 20px;
+                                margin-top: 4%;
+                            }
+                            
+                            .pieChartTwo .boxTwo .chartTwo {
+                                position: relative;
+                                width: 100px;
+                                height: 100px;
+                                margin: 0 auto;
+                                text-align: center;
+                                font-size: 25px;
+                                line-height: 100px;
+                            }
+                            
+                            .pieChartTwo .boxTwo canvas {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                            }
+                            
+                            .pieChartTwo .boxTwo .chartTwo:hover {
+                                background-color: rgba(0, 136, 169, 1);
+                                border: none;
+                                border-radius: 50px;
+                                cursor: pointer;
+                                transition: all 0.3s ease 0s;
+                                color: white;
+                            }
+                            
+                            .videoWrapper {
+                                position: relative;
+                                width: 40;
+                                height: 70;
+                                /* margin: 50px 50px;
+                                padding: 50px 100px; */
+                                top: 40px;
+                                right: -550px;
+                                transform: translate(-50%, -50%);
+                            }
+                            
+                            .videoWrapper iframe {
+                                position: absolute;
+                                margin-top: -25%;
+                            }
+                            
+                            .videoWrapperTwo {
+                                position: relative;
+                                width: 40;
+                                height: 70;
+                                /* margin: 50px 50px;
+                                padding: 50px 100px; */
+                                top: 140px;
+                                right: -550px;
+                                transform: translate(-50%, -50%);
+                            }
+                            
+                            .videoWrapperTwo iframe {
+                                position: absolute;
+                                margin-top: -140px;
+                            }
+                            
+                            #menu_list {
+                                display: block;
+                            }
+                            
+                            @keyframes type {
+                                0% {
+                                    width: 0ch;
+                                }
+                                100% {
+                                    width: 36ch;
+                                }
+                            }
+                            /* @media (min-width:1200px) {}*/
+                            
+                            @media (max-width:990px) {
+                                label.logo {
+                                    left: 6%;
+                                    top: 20px;
+                                    width: 130px;
+                                }
+                                ul {
+                                    position: fixed;
+                                    width: 50%;
+                                    height: 100vh;
+                                    background: #0f0f0f;
+                                    top: 80px;
+                                    right: 0;
+                                    text-align: center;
+                                    display: flex;
+                                    flex-direction: column;
+                                }
+                                nav ul li {
+                                    display: block;
+                                    margin: 50px 0;
+                                    line-height: 30px;
+                                }
+                                #menu_list {
+                                    display: none;
+                                }
+                                #iconbar {
+                                    visibility: visible;
+                                    opacity: 1;
+                                }
+                                button {
+                                    padding: 9px 25px;
+                                    background-color: rgba(0, 136, 169, 1);
+                                    border: none;
+                                    border-radius: 50px;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease 0s;
+                                }
+                                button:hover {
+                                    background-color: rgba(0, 136, 169, .8);
+                                }
+                            }
+                            
+                            @media (max-width:800px) {
+                                #iconbar {
+                                    display: block;
+                                }
+                                ul {
+                                    position: fixed;
+                                    width: 50%;
+                                    height: 100vh;
+                                    background: #0f0f0f;
+                                    top: 80px;
+                                    right: 0;
+                                    text-align: center;
+                                    display: flex;
+                                    flex-direction: column;
+                                }
+                                nav ul li {
+                                    display: block;
+                                    margin: 50px 0;
+                                    line-height: 30px;
+                                }
+                                #menu_list {
+                                    display: none;
+                                }
+                                nav ul li a {
+                                    font-size: 20px;
+                                }
+                            }
+                            
+                            @media (max-width:600px) {
+                                #iconbar {
+                                    display: block;
+                                }
+                                ul {
+                                    position: fixed;
+                                    width: 30%;
+                                    height: 100vh;
+                                    background: #0f0f0f;
+                                    top: 80px;
+                                    right: 0;
+                                    text-align: center;
+                                    display: flex;
+                                    flex-direction: column;
+                                }
+                                nav ul li {
+                                    display: block;
+                                    margin: 50px 0;
+                                    line-height: 30px;
+                                }
+                                #menu_list {
+                                    display: none;
+                                }
+                                nav ul li a {
+                                    font-size: 20px;
+                                }
+                            }
+                            /*@media (max-width:480px) {}
